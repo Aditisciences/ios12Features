@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="NotificationCentreExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owI-3R-QFO">
+                                <rect key="frame" x="120" y="0.0" width="55" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="Fgq-91-1wu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="notificationClick:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="NmW-wh-gVf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srz-zC-bio">
+                                <rect key="frame" x="9" y="17" width="303" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Srz-zC-bio" firstAttribute="top" secondItem="owI-3R-QFO" secondAttribute="bottom" id="0Jh-0P-EJ9"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="owI-3R-QFO" secondAttribute="trailing" constant="145" id="H1u-Ay-vQU"/>
+                            <constraint firstItem="owI-3R-QFO" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="120" id="P0L-DY-Sbz"/>
+                            <constraint firstItem="owI-3R-QFO" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" id="bST-ea-xDq"/>
+                            <constraint firstItem="Srz-zC-bio" firstAttribute="bottom" secondItem="2BE-c3-nQJ" secondAttribute="bottom" id="edZ-DT-fhJ"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="Srz-zC-bio" secondAttribute="trailing" constant="8" id="qfZ-CM-VVt"/>
+                            <constraint firstItem="Srz-zC-bio" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="9" id="tIb-JS-s0p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="37"/>
+                    <connections>
+                        <outlet property="label" destination="edZ-DT-fhJ" id="AhF-B2-Cm1"/>
+                        <outlet property="textLabel" destination="Srz-zC-bio" id="YIl-Pz-MKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
